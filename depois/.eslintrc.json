@@ -1,0 +1,32 @@
+{
+  "extends": [
+    "@rocketseat/eslint-config/node"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "all",
+        "semi": true,
+        "singleQuote": true,
+        "printWidth": 120,
+        "useTabs": false,
+        "bracketSpacing": true,
+        "bracketSameLine": true,
+        "arrowParens": "always",
+        "endOfLine": "lf"
+      }
+    ],
+    "no-useless-constructor": "off",
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "types": {
+          // un-ban a type that's banned by default
+          "{}": false
+        },
+        "extendDefaults": true
+      }
+    ]
+  }
+}

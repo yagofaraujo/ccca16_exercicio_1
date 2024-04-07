@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  database:
+    env_file: .env
+    container_name: database
+    build:
+      context: ./database
+      dockerfile: Dockerfile
+    ports:
+      - 5432:5432
+    volumes:
+      - pg_data:/var/lib/postgres/data
+
+volumes:
+  pg_data:
+
